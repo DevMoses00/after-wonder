@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bci4hn2ps4hmv"
+path="res://.godot/imported/Blue-Ray Player Noise A.wav-25c085e938ba707e9d7abd06ba44f8f4.sample"
+
+[deps]
+
+source_file="res://Audio/Intro/Blue-Ray Player Noise A.wav"
+dest_files=["res://.godot/imported/Blue-Ray Player Noise A.wav-25c085e938ba707e9d7abd06ba44f8f4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

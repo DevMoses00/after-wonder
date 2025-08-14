@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c6k7fi67jf4p7"
+path="res://.godot/imported/Light Switch On A.wav-2bb6129c3143aa1877d26bacb3d03abd.sample"
+
+[deps]
+
+source_file="res://Audio/Intro/Light Switch On A.wav"
+dest_files=["res://.godot/imported/Light Switch On A.wav-2bb6129c3143aa1877d26bacb3d03abd.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,165 @@
+[gd_scene load_steps=20 format=3 uid="uid://dvl3nva83h3f5"]
+
+[ext_resource type="Texture2D" uid="uid://cp6f5hjhbrj5a" path="res://Art/Game2/ring.png" id="1_1umn5"]
+[ext_resource type="Script" uid="uid://c6jryxpcbsh1v" path="res://Scripts/game_2.gd" id="1_aurdq"]
+[ext_resource type="Texture2D" uid="uid://dorsv3m5worev" path="res://Art/PixelGwenMini/Gwen_base1.png" id="9_45jfu"]
+[ext_resource type="Texture2D" uid="uid://c3sr44lnhqa13" path="res://Art/PixelGwenMini/Gwen_base2.png" id="10_gfkvf"]
+[ext_resource type="Texture2D" uid="uid://chyfhlgcuep0t" path="res://Art/PixelGwenMini/Gwen_base3.png" id="11_4psf1"]
+[ext_resource type="Texture2D" uid="uid://b71e5e3wum351" path="res://Art/PixelGwenMini/PGwen_eyes1.png" id="12_rv8rv"]
+[ext_resource type="Texture2D" uid="uid://cta5kv25fqag7" path="res://Art/PixelGwenMini/PGwen_eyes2.png" id="13_a0y4k"]
+[ext_resource type="Texture2D" uid="uid://c8e8fsyrj3o1a" path="res://Art/Game2/indicator.png" id="14_pw40m"]
+[ext_resource type="Texture2D" uid="uid://dh31wa5nn3p6x" path="res://Art/PixelGwenMini/PGwen_eyes3.png" id="14_rwkjr"]
+[ext_resource type="Texture2D" uid="uid://brrwuxwbbvn6l" path="res://Art/PixelGwenMini/PGwen_mouth1.png" id="15_rg3q7"]
+[ext_resource type="Texture2D" uid="uid://b6tng0w5ge8jp" path="res://Art/PixelGwenMini/PGwen_mouth2.png" id="16_veuae"]
+[ext_resource type="Texture2D" uid="uid://83jq0smtdn5n" path="res://Art/PixelGwenMini/PGwen_mouth3.png" id="17_ywx62"]
+[ext_resource type="Texture2D" uid="uid://bbup4814hiqk4" path="res://Art/Game2/rock1.png" id="18_70r5o"]
+[ext_resource type="Texture2D" uid="uid://cmv5n2x3y5pkm" path="res://Art/PixelGwenMini/PGwen_bg.png" id="18_trp0m"]
+[ext_resource type="Texture2D" uid="uid://dn1d1y4qt63tf" path="res://Art/Game2/rock2.png" id="19_1to4e"]
+[ext_resource type="Texture2D" uid="uid://duskkmk4xvbwj" path="res://Art/Game2/rock3.png" id="20_0qt2u"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iwxau"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_45jfu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_gfkvf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_4psf1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tjhh7"]
+animations = [{
+"frames": [{
+"duration": 16.0,
+"texture": ExtResource("12_rv8rv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_a0y4k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_rwkjr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5febn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_rg3q7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_veuae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ywx62")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Game2" type="Node2D"]
+script = ExtResource("1_aurdq")
+
+[node name="Ring" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_1umn5")
+
+[node name="RockContainer" type="Node2D" parent="."]
+
+[node name="Rock0" type="Sprite2D" parent="RockContainer"]
+position = Vector2(-280, 0)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("18_70r5o")
+
+[node name="HitParticles" type="CPUParticles2D" parent="RockContainer/Rock0"]
+emitting = false
+amount = 30
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+emission_shape = 2
+emission_sphere_radius = 68.5
+direction = Vector2(0, -1)
+gravity = Vector2(0, 300)
+initial_velocity_min = 100.0
+initial_velocity_max = 200.0
+scale_amount_min = 0.0
+scale_amount_max = 5.1
+hue_variation_min = -1.0
+
+[node name="Rock1" type="Sprite2D" parent="RockContainer"]
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("19_1to4e")
+
+[node name="HitParticles" type="CPUParticles2D" parent="RockContainer/Rock1"]
+emitting = false
+amount = 30
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+emission_shape = 2
+emission_sphere_radius = 68.5
+direction = Vector2(0, -1)
+gravity = Vector2(0, 300)
+initial_velocity_min = 100.0
+initial_velocity_max = 200.0
+scale_amount_min = 0.0
+scale_amount_max = 5.1
+hue_variation_min = -1.0
+
+[node name="Rock2" type="Sprite2D" parent="RockContainer"]
+position = Vector2(288, 0)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("20_0qt2u")
+
+[node name="HitParticles" type="CPUParticles2D" parent="RockContainer/Rock2"]
+emitting = false
+amount = 30
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+emission_shape = 2
+emission_sphere_radius = 68.5
+direction = Vector2(0, -1)
+gravity = Vector2(0, 300)
+initial_velocity_min = 100.0
+initial_velocity_max = 200.0
+scale_amount_min = 0.0
+scale_amount_max = 5.1
+hue_variation_min = -1.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(8, -120)
+zoom = Vector2(0.9, 0.9)
+
+[node name="PixelGwen" type="AnimatedSprite2D" parent="."]
+position = Vector2(-288, -232)
+scale = Vector2(1.9, 1.9)
+sprite_frames = SubResource("SpriteFrames_iwxau")
+
+[node name="Eyes" type="AnimatedSprite2D" parent="PixelGwen"]
+sprite_frames = SubResource("SpriteFrames_tjhh7")
+autoplay = "default"
+
+[node name="Mouth" type="AnimatedSprite2D" parent="PixelGwen"]
+sprite_frames = SubResource("SpriteFrames_5febn")
+
+[node name="Sprite2D" type="Sprite2D" parent="PixelGwen"]
+z_index = -1
+texture = ExtResource("18_trp0m")
+
+[node name="Indicator" type="Sprite2D" parent="."]
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("14_pw40m")

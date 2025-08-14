@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dvimxyi6x4hqe"
+path="res://.godot/imported/Rolling Office Chair A.wav-4b82da06e594372a4b96b4e1064b428a.sample"
+
+[deps]
+
+source_file="res://Audio/Intro/Rolling Office Chair A.wav"
+dest_files=["res://.godot/imported/Rolling Office Chair A.wav-4b82da06e594372a4b96b4e1064b428a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

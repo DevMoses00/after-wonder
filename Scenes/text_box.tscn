@@ -1,0 +1,65 @@
+[gd_scene load_steps=6 format=3 uid="uid://cpymw63ty0n87"]
+
+[ext_resource type="Shader" uid="uid://2khxw1wgf4cq" path="res://Shaders/crt.gdshader" id="1_ot2p7"]
+[ext_resource type="Script" uid="uid://desvcqiu0ew0a" path="res://Scripts/text_box.gd" id="1_q7gqu"]
+[ext_resource type="FontFile" uid="uid://duk0opp5joiyo" path="res://Fonts/Jersey15-Regular.ttf" id="2_0kxgl"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w6krc"]
+shader = ExtResource("1_ot2p7")
+shader_parameter/pixel_size = 7.05
+shader_parameter/curvature = 1.15
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/scanline_intensity = 0.2
+shader_parameter/glitch_intensity = 0.02
+shader_parameter/chroma_offset = 0.0015
+
+[sub_resource type="FontVariation" id="FontVariation_ot2p7"]
+base_font = ExtResource("2_0kxgl")
+
+[node name="TextBox" type="MarginContainer" node_paths=PackedStringArray("dialogue")]
+material = SubResource("ShaderMaterial_w6krc")
+offset_right = 192.0
+offset_bottom = 144.0
+script = ExtResource("1_q7gqu")
+dialogue = NodePath("NinePatchRect/dialogue")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 2
+region_rect = Rect2(8, 4.97376, 480, 488.203)
+patch_margin_left = 79
+patch_margin_top = 72
+patch_margin_right = 92
+patch_margin_bottom = 63
+
+[node name="dialogue" type="NinePatchRect" parent="NinePatchRect"]
+visible = false
+layout_mode = 2
+offset_right = 192.0
+offset_bottom = 145.0
+region_rect = Rect2(8, 4.97376, 480, 488.203)
+patch_margin_left = 79
+patch_margin_top = 72
+patch_margin_right = 92
+patch_margin_bottom = 63
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="Label" type="Label" parent="MarginContainer"]
+texture_filter = 2
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.1829, 0.31, 0.1829, 1)
+theme_override_fonts/font = SubResource("FontVariation_ot2p7")
+theme_override_font_sizes/font_size = 40
+text = "TESTING "
+horizontal_alignment = 1
+
+[node name="LetterDisplayTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="LetterDisplayTimer" to="." method="_on_letter_display_timer_timeout"]

@@ -1,0 +1,141 @@
+[gd_scene load_steps=24 format=3 uid="uid://oghmywa5v3o7"]
+
+[ext_resource type="Script" uid="uid://ceh7e4ane01uc" path="res://Scripts/game_1.gd" id="1_vcpqk"]
+[ext_resource type="Texture2D" uid="uid://dxtmcdja5yqsj" path="res://Art/Game1/game1_grid.png" id="2_knbsw"]
+[ext_resource type="Texture2D" uid="uid://br6u4a70207to" path="res://Art/Game1/mini_arthur1.png" id="3_xfcu6"]
+[ext_resource type="Texture2D" uid="uid://c656wfcf4ge11" path="res://Art/Game1/mini_arthur2.png" id="4_4pwij"]
+[ext_resource type="Texture2D" uid="uid://bcic4wjpwlpdy" path="res://Art/Game1/mini_arthur3.png" id="5_2dx7l"]
+[ext_resource type="Texture2D" uid="uid://unracirjkc72" path="res://Art/Game1/mini_gwen1.png" id="6_bgbom"]
+[ext_resource type="Texture2D" uid="uid://g8kjr2tnnssn" path="res://Art/Game1/mini_gwen2.png" id="7_6pp3p"]
+[ext_resource type="Texture2D" uid="uid://cuxxxkhpj74bf" path="res://Art/Game1/mini_gwen3.png" id="8_d671g"]
+[ext_resource type="Texture2D" uid="uid://dorsv3m5worev" path="res://Art/PixelGwenMini/Gwen_base1.png" id="9_2ys0v"]
+[ext_resource type="Texture2D" uid="uid://c3sr44lnhqa13" path="res://Art/PixelGwenMini/Gwen_base2.png" id="10_041h1"]
+[ext_resource type="Texture2D" uid="uid://chyfhlgcuep0t" path="res://Art/PixelGwenMini/Gwen_base3.png" id="11_8ifvx"]
+[ext_resource type="Texture2D" uid="uid://b71e5e3wum351" path="res://Art/PixelGwenMini/PGwen_eyes1.png" id="12_pudeg"]
+[ext_resource type="Texture2D" uid="uid://cta5kv25fqag7" path="res://Art/PixelGwenMini/PGwen_eyes2.png" id="13_bp1c5"]
+[ext_resource type="Texture2D" uid="uid://dh31wa5nn3p6x" path="res://Art/PixelGwenMini/PGwen_eyes3.png" id="14_aci7e"]
+[ext_resource type="Texture2D" uid="uid://brrwuxwbbvn6l" path="res://Art/PixelGwenMini/PGwen_mouth1.png" id="15_w5yux"]
+[ext_resource type="Texture2D" uid="uid://b6tng0w5ge8jp" path="res://Art/PixelGwenMini/PGwen_mouth2.png" id="16_v35nh"]
+[ext_resource type="Texture2D" uid="uid://83jq0smtdn5n" path="res://Art/PixelGwenMini/PGwen_mouth3.png" id="17_76e8w"]
+[ext_resource type="Texture2D" uid="uid://cmv5n2x3y5pkm" path="res://Art/PixelGwenMini/PGwen_bg.png" id="18_gn3co"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k5ahu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_xfcu6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4pwij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2dx7l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ubc2i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_bgbom")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6pp3p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_d671g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iwxau"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_2ys0v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_041h1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8ifvx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tjhh7"]
+animations = [{
+"frames": [{
+"duration": 16.0,
+"texture": ExtResource("12_pudeg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_bp1c5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_aci7e")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5febn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_w5yux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_v35nh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_76e8w")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Game1" type="Node2D"]
+script = ExtResource("1_vcpqk")
+
+[node name="Grid" type="Sprite2D" parent="."]
+texture = ExtResource("2_knbsw")
+
+[node name="Arthur" type="AnimatedSprite2D" parent="Grid"]
+position = Vector2(200, 65)
+sprite_frames = SubResource("SpriteFrames_k5ahu")
+autoplay = "default"
+
+[node name="Gwen" type="AnimatedSprite2D" parent="Grid"]
+position = Vector2(-200, -65)
+sprite_frames = SubResource("SpriteFrames_ubc2i")
+autoplay = "default"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(8, -120)
+zoom = Vector2(0.9, 0.9)
+
+[node name="PixelGwen" type="AnimatedSprite2D" parent="."]
+position = Vector2(-288, -232)
+scale = Vector2(1.9, 1.9)
+sprite_frames = SubResource("SpriteFrames_iwxau")
+
+[node name="Eyes" type="AnimatedSprite2D" parent="PixelGwen"]
+sprite_frames = SubResource("SpriteFrames_tjhh7")
+autoplay = "default"
+
+[node name="Mouth" type="AnimatedSprite2D" parent="PixelGwen"]
+sprite_frames = SubResource("SpriteFrames_5febn")
+
+[node name="Sprite2D" type="Sprite2D" parent="PixelGwen"]
+z_index = -1
+texture = ExtResource("18_gn3co")

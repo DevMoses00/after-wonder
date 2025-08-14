@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://0oppfppv6jjp"
+path="res://.godot/imported/Ambient Vol6 Never Alone Intensity 1.mp3-ccc7f174139ebeba4fc7f5f7bd9f0dc4.mp3str"
+
+[deps]
+
+source_file="res://Audio/Background/Ambient Vol6 Never Alone Intensity 1.mp3"
+dest_files=["res://.godot/imported/Ambient Vol6 Never Alone Intensity 1.mp3-ccc7f174139ebeba4fc7f5f7bd9f0dc4.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

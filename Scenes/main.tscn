@@ -1,3 +1,59 @@
-[gd_scene format=3 uid="uid://dewfimx7tmx6t"]
+[gd_scene load_steps=6 format=3 uid="uid://dewfimx7tmx6t"]
+
+[ext_resource type="Script" uid="uid://b1fqfsbu7fdws" path="res://Scripts/main.gd" id="1_jjgbg"]
+[ext_resource type="Texture2D" uid="uid://0traa8ekrda3" path="res://Resources/Primary_White_Cropped.png" id="2_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://cb71y3vhpcns1" path="res://Scenes/arcade_base.tscn" id="3_8gbba"]
+[ext_resource type="Shader" uid="uid://2khxw1wgf4cq" path="res://Shaders/crt.gdshader" id="4_jjvhh"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kry3j"]
+resource_local_to_scene = true
+shader = ExtResource("4_jjvhh")
+shader_parameter/pixel_size = 0.03
+shader_parameter/curvature = 0.03
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/scanline_intensity = 0.02
+shader_parameter/glitch_intensity = 0.01
+shader_parameter/chroma_offset = 0.0015
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_jjgbg")
+
+[node name="Logo" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+texture = ExtResource("2_bo1nx")
+
+[node name="ArcadeBase" parent="." instance=ExtResource("3_8gbba")]
+visible = false
+
+[node name="Handle" parent="ArcadeBase" index="16" node_paths=PackedStringArray("rect")]
+rect = NodePath("../../CRTEffect/ColorRect")
+camera_node_path = NodePath("../../Camera2D")
+
+[node name="ArcadeScreen" type="SubViewportContainer" parent="."]
+offset_left = -352.0
+offset_top = -256.0
+offset_right = 348.0
+offset_bottom = 224.0
+
+[node name="ArcadeViewport" type="SubViewport" parent="ArcadeScreen"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(700, 480)
+render_target_update_mode = 4
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CRTEffect" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CRTEffect"]
+material = SubResource("ShaderMaterial_kry3j")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[editable path="ArcadeBase"]

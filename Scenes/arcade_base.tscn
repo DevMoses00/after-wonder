@@ -1,0 +1,961 @@
+[gd_scene load_steps=121 format=3 uid="uid://cb71y3vhpcns1"]
+
+[ext_resource type="Texture2D" uid="uid://oyp37uo1d777" path="res://Art/AW_Gwen/Gwen_base.png" id="1_7q73x"]
+[ext_resource type="Texture2D" uid="uid://byea6ohjstcwx" path="res://Art/ArcadeBase/Untitled_Artwork 6.png" id="1_68bsu"]
+[ext_resource type="Texture2D" uid="uid://orv1iweip6co" path="res://Art/Phone/phonecall_base.png" id="1_n0syi"]
+[ext_resource type="Script" uid="uid://c1pybdvtsillo" path="res://Scripts/stickdrag.gd" id="2_4lj8h"]
+[ext_resource type="Texture2D" uid="uid://bdei861cq08yv" path="res://Art/Phone/phonecall_phone.png" id="2_dfpqh"]
+[ext_resource type="Texture2D" uid="uid://bb1i13ekiordt" path="res://Art/Buttons/start_button.png" id="2_kxmxo"]
+[ext_resource type="Texture2D" uid="uid://bljhkuxwj37ht" path="res://Art/AW_Gwen/Gwen_eyes_closed.png" id="2_y250j"]
+[ext_resource type="Texture2D" uid="uid://62aqsljp2xyw" path="res://Art/Phone/phonecall_title.png" id="3_00lkd"]
+[ext_resource type="Script" uid="uid://c656n0t1e5cci" path="res://Scripts/joystick.gd" id="3_4lj8h"]
+[ext_resource type="Texture2D" uid="uid://b7d5mnlj8nfbe" path="res://Art/Buttons/left_button_1.png" id="3_kyjh5"]
+[ext_resource type="Texture2D" uid="uid://bwu6mgvmcui7" path="res://Art/AW_Gwen/Gwen_eyes_open.png" id="3_qldkj"]
+[ext_resource type="Texture2D" uid="uid://pshflc6mqyvb" path="res://Art/Buttons/left_button_2.png" id="4_66rle"]
+[ext_resource type="Texture2D" uid="uid://bhy1h7xubycmt" path="res://Art/AW_Gwen/Gwen_mouth_closed.png" id="4_520tl"]
+[ext_resource type="Script" uid="uid://cegulw5ayw443" path="res://Scripts/button.gd" id="4_hwpml"]
+[ext_resource type="Texture2D" uid="uid://fayeern21kd1" path="res://Art/Buttons/left_orb.png" id="5_6rv3x"]
+[ext_resource type="Texture2D" uid="uid://bai8e13xmo2ah" path="res://Art/AW_Gwen/Gwen_mouth_open.png" id="5_60dmr"]
+[ext_resource type="Texture2D" uid="uid://dmrccodmkxihm" path="res://Art/Buttons/enter_button.png" id="6_a0luy"]
+[ext_resource type="Texture2D" uid="uid://ha3ddb6a7gkh" path="res://Art/AW_Gwen/Gwen_Phone.png" id="6_ge88b"]
+[ext_resource type="Shader" uid="uid://bxqv2skeubk6g" path="res://buttonglow.gdshader" id="6_kyvcm"]
+[ext_resource type="Script" uid="uid://dpu26bvwwrkd" path="res://Scripts/startbutton.gd" id="6_ypv0h"]
+[ext_resource type="Texture2D" uid="uid://cjfww2382apsn" path="res://Art/Buttons/left_arrow.png" id="7_66rle"]
+[ext_resource type="Texture2D" uid="uid://dorsv3m5worev" path="res://Art/PixelGwenMini/Gwen_base1.png" id="7_wwd1c"]
+[ext_resource type="Texture2D" uid="uid://cfrgradvnm01l" path="res://Art/Buttons/right_arrow.png" id="8_6rv3x"]
+[ext_resource type="Texture2D" uid="uid://c3sr44lnhqa13" path="res://Art/PixelGwenMini/Gwen_base2.png" id="8_e4iat"]
+[ext_resource type="Texture2D" uid="uid://dilbo77cu3ce5" path="res://Art/Titles/1.png" id="8_qldkj"]
+[ext_resource type="Texture2D" uid="uid://cct4bsn62itrg" path="res://Art/Titles/2.png" id="9_520tl"]
+[ext_resource type="Texture2D" uid="uid://c66wvbmqchacd" path="res://Art/Buttons/pod.png" id="9_ntqyd"]
+[ext_resource type="Texture2D" uid="uid://chyfhlgcuep0t" path="res://Art/PixelGwenMini/Gwen_base3.png" id="9_sb6id"]
+[ext_resource type="Texture2D" uid="uid://bpm5nbr8gifyt" path="res://Art/Buttons/joystick.png" id="10_ce1vx"]
+[ext_resource type="Texture2D" uid="uid://b71e5e3wum351" path="res://Art/PixelGwenMini/PGwen_eyes1.png" id="10_n0syi"]
+[ext_resource type="Texture2D" uid="uid://cta5kv25fqag7" path="res://Art/PixelGwenMini/PGwen_eyes2.png" id="11_dfpqh"]
+[ext_resource type="Texture2D" uid="uid://k05xthudpffe" path="res://Art/Buttons/handle.png" id="11_s8opg"]
+[ext_resource type="Texture2D" uid="uid://dh31wa5nn3p6x" path="res://Art/PixelGwenMini/PGwen_eyes3.png" id="12_00lkd"]
+[ext_resource type="Texture2D" uid="uid://bjlpr56bdsvrb" path="res://Art/Buttons/dial.png" id="12_mt3et"]
+[ext_resource type="Texture2D" uid="uid://brrwuxwbbvn6l" path="res://Art/PixelGwenMini/PGwen_mouth1.png" id="13_syw1g"]
+[ext_resource type="Texture2D" uid="uid://c1adnifttkffg" path="res://Art/Buttons/Keys/K1.png" id="14_5lrl7"]
+[ext_resource type="Texture2D" uid="uid://b6tng0w5ge8jp" path="res://Art/PixelGwenMini/PGwen_mouth2.png" id="14_b5jbq"]
+[ext_resource type="Texture2D" uid="uid://csuujp2ooveuw" path="res://Art/Buttons/Keys/K2.png" id="15_4lj8h"]
+[ext_resource type="Texture2D" uid="uid://83jq0smtdn5n" path="res://Art/PixelGwenMini/PGwen_mouth3.png" id="15_g22fu"]
+[ext_resource type="Texture2D" uid="uid://cmv5n2x3y5pkm" path="res://Art/PixelGwenMini/PGwen_bg.png" id="16_e4iat"]
+[ext_resource type="Texture2D" uid="uid://cj65kb685d26n" path="res://Art/Buttons/Keys/K3.png" id="16_n2h82"]
+[ext_resource type="Texture2D" uid="uid://c0u6l2p507wqb" path="res://Art/Buttons/Keys/K4.png" id="17_ypv0h"]
+[ext_resource type="Texture2D" uid="uid://b5ufw7s5t1xxg" path="res://Art/Buttons/Keys/K5.png" id="18_kyvcm"]
+[ext_resource type="Texture2D" uid="uid://daqwmygce31ht" path="res://Art/Buttons/Keys/K6.png" id="19_4707b"]
+[ext_resource type="Texture2D" uid="uid://cjpoclionqxpn" path="res://Art/LargePixelGwen/largepGwen.png" id="20_thead"]
+[ext_resource type="Texture2D" uid="uid://bh7vrciet3x6x" path="res://Art/Buttons/Keys/K7.png" id="20_woebh"]
+[ext_resource type="Texture2D" uid="uid://cgtvcgux1ha7i" path="res://Art/LargePixelGwen/largepGweneyes1.png" id="21_6grbp"]
+[ext_resource type="Texture2D" uid="uid://c5utsikql7e7n" path="res://Art/Buttons/Keys/K8.png" id="21_8qi0h"]
+[ext_resource type="Texture2D" uid="uid://02oexj5fb3gm" path="res://Art/LargePixelGwen/largepGweneyes2.png" id="22_bjdpb"]
+[ext_resource type="Texture2D" uid="uid://if8ryws4qfg" path="res://Art/Buttons/Keys/K9.png" id="22_td3jy"]
+[ext_resource type="Texture2D" uid="uid://c48p6vvhu3wf3" path="res://Art/LargePixelGwen/largepGweneyes3.png" id="23_2p8o1"]
+[ext_resource type="Texture2D" uid="uid://cbvr7dhovfrqv" path="res://Art/Buttons/Keys/K10.png" id="23_b380l"]
+[ext_resource type="Texture2D" uid="uid://dc2wu4stmkte3" path="res://Art/PixelGameTitle/Arthur & Gwen.png" id="24_2ka5k"]
+[ext_resource type="Texture2D" uid="uid://ct7ra3klxn2k1" path="res://Art/LargePixelGwen/largepGwenmouths1.png" id="24_2p8o1"]
+[ext_resource type="Texture2D" uid="uid://y4rcswryplx8" path="res://Art/Buttons/Keys/K11.png" id="24_7q73x"]
+[ext_resource type="Texture2D" uid="uid://whp5jxwdd8dx" path="res://Art/LargePixelGwen/largepGwenmouths2.png" id="25_70e40"]
+[ext_resource type="Texture2D" uid="uid://bnbevbxi8xg7e" path="res://Art/PixelGameTitle/A Life Reimagined.png" id="25_wbin6"]
+[ext_resource type="Texture2D" uid="uid://bdbpwf2rhstgu" path="res://Art/Buttons/Keys/K12.png" id="25_y250j"]
+[ext_resource type="Texture2D" uid="uid://ce6oab1yu1rvh" path="res://Art/LargePixelGwen/largepGwenmouths3.png" id="26_mcyv1"]
+[ext_resource type="AudioStream" uid="uid://1bps2ubmf3o5" path="res://Audio/ButtonSounds/Blue-Ray Player Noise B.wav" id="26_syw1g"]
+[ext_resource type="AudioStream" uid="uid://tyxbl2k41b32" path="res://Audio/ButtonSounds/Keyboard A.wav" id="29_dfpqh"]
+[ext_resource type="Script" uid="uid://bmdffn815xclh" path="res://Scripts/handle.gd" id="40_b5jbq"]
+[ext_resource type="AudioStream" uid="uid://dip07t06p8qwt" path="res://Audio/ButtonSounds/Keyboard B.wav" id="41_00lkd"]
+[ext_resource type="Script" uid="uid://dyp77gcf7vbcf" path="res://Scripts/orb.gd" id="46_70e40"]
+
+[sub_resource type="Animation" id="Animation_b5jbq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PhoneHandset:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.0872665]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PhoneHandset:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1, 45)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PhoneBase:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1, 45)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PhoneTitle:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_syw1g"]
+resource_name = "ring"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PhoneHandset:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.04, 0.2, 0.4, 0.6, 0.8, 1, 1.16, 1.36, 1.56, 1.76, 1.96, 2, 2.16, 2.36, 2.56, 2.76, 2.96, 3, 3.16, 3.36, 3.56, 3.76, 3.96, 4.01, 4.17, 4.37, 4.57, 4.77, 4.97),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.0872665, 0.0872665, -0.0872665, 0.0872665, 0.0, -0.0872665, 0.0872665, -0.0872665, 0.0872665, 0.0, 0.0, -0.0872665, 0.0872665, -0.0872665, 0.0872665, 0.0, 0.0, -0.0872665, 0.0872665, -0.0872665, 0.0872665, 0.0, 0.0, -0.0872665, 0.0872665, -0.0872665, 0.0872665, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PhoneHandset:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.39, 0.6, 0.8, 1, 1.2, 1.39, 1.6, 1.8, 2, 2.2, 2.39, 2.6, 2.8, 3, 3.2, 3.39, 3.6, 3.8, 4, 4.2, 4.39, 4.6, 4.8, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-1, 45), Vector2(-1, 45), Vector2(2, 45), Vector2(-4, 45), Vector2(2, 45), Vector2(-1, 45), Vector2(-1, 45), Vector2(2, 45), Vector2(-4, 45), Vector2(2, 45), Vector2(-1, 45), Vector2(-1, 45), Vector2(2, 45), Vector2(-4, 45), Vector2(2, 45), Vector2(-1, 45), Vector2(-1, 45), Vector2(2, 45), Vector2(-4, 45), Vector2(2, 45), Vector2(-1, 45), Vector2(-1, 45), Vector2(2, 45), Vector2(-4, 45), Vector2(2, 45), Vector2(-4, 45)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PhoneBase:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2, 2.2, 2.4, 2.6, 2.8, 3, 3.2, 3.4, 3.6, 3.8, 4, 4.2, 4.4, 4.6, 4.8, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-1, 45), Vector2(-4, 45), Vector2(2, 45), Vector2(-4, 45), Vector2(2, 45), Vector2(-1, 45), Vector2(-4, 45), Vector2(2, 45), Vector2(-4, 45), Vector2(2, 45), Vector2(-1, 45), Vector2(-4, 45), Vector2(2, 45), Vector2(-4, 45), Vector2(2, 45), Vector2(-1, 45), Vector2(-4, 45), Vector2(2, 45), Vector2(-4, 45), Vector2(2, 45), Vector2(-1, 45), Vector2(-4, 45), Vector2(2, 45), Vector2(-4, 45), Vector2(2, 45), Vector2(-1, 45)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PhoneTitle:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.0784314), Color(1, 1, 1, 1), Color(1, 1, 1, 0.0784314), Color(1, 1, 1, 1), Color(1, 1, 1, 0.0784314), Color(1, 1, 1, 1), Color(1, 1, 1, 0.0784314), Color(1, 1, 1, 1), Color(1, 1, 1, 0.0784314), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g22fu"]
+_data = {
+&"RESET": SubResource("Animation_b5jbq"),
+&"ring": SubResource("Animation_syw1g")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cdcvm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7q73x")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mytvo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_y250j")
+}, {
+"duration": 20.0,
+"texture": ExtResource("3_qldkj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hwo7w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_520tl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_60dmr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v5m2g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_ge88b")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2ka5k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_wwd1c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_e4iat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_sb6id")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wbin6"]
+animations = [{
+"frames": [{
+"duration": 16.0,
+"texture": ExtResource("10_n0syi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_dfpqh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_00lkd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lyhwo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_syw1g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_b5jbq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_g22fu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_70e40"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_thead")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mcyv1"]
+animations = [{
+"frames": [{
+"duration": 16.0,
+"texture": ExtResource("21_6grbp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_bjdpb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_2p8o1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2p8o1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_2p8o1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_70e40")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_mcyv1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qldkj"]
+radius = 29.0172
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mcyv1"]
+shader = ExtResource("6_kyvcm")
+shader_parameter/pulse_strength = 1.0
+shader_parameter/time = 0.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_520tl"]
+radius = 40.7296
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ypv0h"]
+shader = ExtResource("6_kyvcm")
+shader_parameter/pulse_strength = 1.0
+shader_parameter/time = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_60dmr"]
+size = Vector2(91.5314, 75.7521)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wwd1c"]
+shader = ExtResource("6_kyvcm")
+shader_parameter/pulse_strength = 1.0
+shader_parameter/time = 0.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ge88b"]
+radius = 22.2036
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e4iat"]
+shader = ExtResource("6_kyvcm")
+shader_parameter/pulse_strength = 1.0
+shader_parameter/time = 0.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cdcvm"]
+radius = 20.8912
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_70e40"]
+shader = ExtResource("6_kyvcm")
+shader_parameter/pulse_strength = 0.3
+shader_parameter/time = 0.5
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mytvo"]
+radius = 58.0775
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sb6id"]
+shader = ExtResource("6_kyvcm")
+shader_parameter/pulse_strength = 1.0
+shader_parameter/time = 0.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hwo7w"]
+radius = 37.9253
+height = 79.496
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n0syi"]
+shader = ExtResource("6_kyvcm")
+shader_parameter/pulse_strength = 1.0
+shader_parameter/time = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v5m2g"]
+size = Vector2(92.4446, 43.4294)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dfpqh"]
+shader = ExtResource("6_kyvcm")
+shader_parameter/pulse_strength = 1.0
+shader_parameter/time = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rkt7e"]
+size = Vector2(101.429, 31.589)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1p6nt"]
+radius = 16.6356
+height = 116.28
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wwd1c"]
+radius = 14.3923
+height = 57.3013
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_00lkd"]
+shader = ExtResource("6_kyvcm")
+shader_parameter/pulse_strength = 1.0
+shader_parameter/time = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e4iat"]
+size = Vector2(82.3629, 44.488)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_syw1g"]
+shader = ExtResource("6_kyvcm")
+shader_parameter/pulse_strength = 1.0
+shader_parameter/time = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sb6id"]
+size = Vector2(90, 49)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b5jbq"]
+shader = ExtResource("6_kyvcm")
+shader_parameter/pulse_strength = 1.0
+shader_parameter/time = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n0syi"]
+size = Vector2(100.353, 51.5)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g22fu"]
+shader = ExtResource("6_kyvcm")
+shader_parameter/pulse_strength = 1.0
+shader_parameter/time = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dfpqh"]
+size = Vector2(95, 37)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2ka5k"]
+shader = ExtResource("6_kyvcm")
+shader_parameter/pulse_strength = 1.0
+shader_parameter/time = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_00lkd"]
+size = Vector2(103, 39)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wbin6"]
+shader = ExtResource("6_kyvcm")
+shader_parameter/pulse_strength = 1.0
+shader_parameter/time = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_syw1g"]
+size = Vector2(103.5, 40.75)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lyhwo"]
+shader = ExtResource("6_kyvcm")
+shader_parameter/pulse_strength = 1.0
+shader_parameter/time = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b5jbq"]
+size = Vector2(97, 36)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wxh53"]
+shader = ExtResource("6_kyvcm")
+shader_parameter/pulse_strength = 1.0
+shader_parameter/time = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g22fu"]
+size = Vector2(103, 38)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_thead"]
+shader = ExtResource("6_kyvcm")
+shader_parameter/pulse_strength = 1.0
+shader_parameter/time = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ka5k"]
+size = Vector2(110.5, 42.5)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6grbp"]
+shader = ExtResource("6_kyvcm")
+shader_parameter/pulse_strength = 1.0
+shader_parameter/time = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wbin6"]
+size = Vector2(82.7217, 40.0099)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bjdpb"]
+shader = ExtResource("6_kyvcm")
+shader_parameter/pulse_strength = 1.0
+shader_parameter/time = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lyhwo"]
+size = Vector2(93.2071, 43.5676)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2p8o1"]
+shader = ExtResource("6_kyvcm")
+shader_parameter/pulse_strength = 1.0
+shader_parameter/time = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wxh53"]
+size = Vector2(93, 49.0337)
+
+[node name="ArcadeBase" type="Node2D"]
+
+[node name="PhoneRoot" type="Node2D" parent="."]
+visible = false
+
+[node name="PhoneBase" type="Sprite2D" parent="PhoneRoot"]
+position = Vector2(-1, 45)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("1_n0syi")
+
+[node name="PhoneHandset" type="Sprite2D" parent="PhoneRoot"]
+position = Vector2(-1, 45)
+rotation = -0.0872665
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_dfpqh")
+
+[node name="PhoneTitle" type="Sprite2D" parent="PhoneRoot"]
+position = Vector2(15, 22)
+scale = Vector2(0.567, 0.567)
+texture = ExtResource("3_00lkd")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PhoneRoot"]
+libraries = {
+&"": SubResource("AnimationLibrary_g22fu")
+}
+
+[node name="Gwen" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+sprite_frames = SubResource("SpriteFrames_cdcvm")
+
+[node name="Eyes" type="AnimatedSprite2D" parent="Gwen"]
+sprite_frames = SubResource("SpriteFrames_mytvo")
+autoplay = "default"
+frame_progress = 0.11208
+
+[node name="Mouth" type="AnimatedSprite2D" parent="Gwen"]
+sprite_frames = SubResource("SpriteFrames_hwo7w")
+
+[node name="Phone" type="AnimatedSprite2D" parent="Gwen"]
+position = Vector2(-1, 2)
+sprite_frames = SubResource("SpriteFrames_v5m2g")
+
+[node name="PixelGwen" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-5, 28)
+sprite_frames = SubResource("SpriteFrames_2ka5k")
+
+[node name="Eyes" type="AnimatedSprite2D" parent="PixelGwen"]
+sprite_frames = SubResource("SpriteFrames_wbin6")
+autoplay = "default"
+frame_progress = 0.195814
+
+[node name="Mouth" type="AnimatedSprite2D" parent="PixelGwen"]
+sprite_frames = SubResource("SpriteFrames_lyhwo")
+frame_progress = 0.235619
+
+[node name="Sprite2D" type="Sprite2D" parent="PixelGwen"]
+z_index = -1
+texture = ExtResource("16_e4iat")
+
+[node name="LargePixelGwen" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(0, 27)
+scale = Vector2(0.53, 0.53)
+sprite_frames = SubResource("SpriteFrames_70e40")
+
+[node name="Eyes" type="AnimatedSprite2D" parent="LargePixelGwen"]
+sprite_frames = SubResource("SpriteFrames_mcyv1")
+autoplay = "default"
+
+[node name="Mouth" type="AnimatedSprite2D" parent="LargePixelGwen"]
+sprite_frames = SubResource("SpriteFrames_2p8o1")
+
+[node name="BaseSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_68bsu")
+
+[node name="AWTitle" type="Sprite2D" parent="."]
+position = Vector2(14, 20)
+scale = Vector2(0.49, 0.49)
+texture = ExtResource("8_qldkj")
+
+[node name="Start" type="Sprite2D" parent="AWTitle"]
+position = Vector2(-12.2449, -67.3469)
+texture = ExtResource("9_520tl")
+
+[node name="PixelTitle" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(2, 158)
+scale = Vector2(0.63, 0.63)
+texture = ExtResource("24_2ka5k")
+
+[node name="Sprite2D" type="Sprite2D" parent="PixelTitle"]
+position = Vector2(-4.76191, -482.54)
+texture = ExtResource("25_wbin6")
+
+[node name="Joystick" type="Node2D" parent="."]
+
+[node name="StickSprite" type="Sprite2D" parent="Joystick"]
+position = Vector2(518, 520)
+texture = ExtResource("10_ce1vx")
+offset = Vector2(-518, -520)
+
+[node name="Area2D" type="Area2D" parent="Joystick" node_paths=PackedStringArray("audio_player")]
+script = ExtResource("2_4lj8h")
+button_sound = ExtResource("26_syw1g")
+audio_player = NodePath("../../AudioStreamPlayer2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Joystick/Area2D"]
+position = Vector2(525, 432)
+shape = SubResource("CircleShape2D_qldkj")
+
+[node name="Pod" type="Node2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="Pod" node_paths=PackedStringArray("audio_player")]
+script = ExtResource("3_4lj8h")
+button_sound = ExtResource("26_syw1g")
+audio_player = NodePath("../../AudioStreamPlayer2D")
+
+[node name="StickSprite" type="Sprite2D" parent="Pod/Area2D"]
+material = SubResource("ShaderMaterial_mcyv1")
+position = Vector2(382, 401)
+texture = ExtResource("9_ntqyd")
+offset = Vector2(-382, -401)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pod/Area2D"]
+position = Vector2(382, 401)
+rotation = 2.26893
+skew = -0.0855211
+shape = SubResource("CircleShape2D_520tl")
+
+[node name="Start" type="Area2D" parent="." node_paths=PackedStringArray("audio_player")]
+script = ExtResource("6_ypv0h")
+button_sound = ExtResource("29_dfpqh")
+audio_player = NodePath("../AudioStreamPlayer2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="Start"]
+material = SubResource("ShaderMaterial_ypv0h")
+position = Vector2(-425, 375)
+texture = ExtResource("2_kxmxo")
+offset = Vector2(426.108, -375)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Start"]
+position = Vector2(-424.705, 374.903)
+rotation = 0.0568433
+skew = 0.23911
+shape = SubResource("RectangleShape2D_60dmr")
+
+[node name="LeftButton1" type="Area2D" parent="." node_paths=PackedStringArray("audio_player")]
+script = ExtResource("4_hwpml")
+button_sound = ExtResource("29_dfpqh")
+audio_player = NodePath("../AudioStreamPlayer2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="LeftButton1"]
+material = SubResource("ShaderMaterial_wwd1c")
+position = Vector2(-819, 388)
+texture = ExtResource("3_kyjh5")
+offset = Vector2(819, -388)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftButton1"]
+position = Vector2(-819, 388)
+rotation = -2.42601
+skew = 0.314159
+shape = SubResource("CircleShape2D_ge88b")
+
+[node name="LeftButton2" type="Area2D" parent="." node_paths=PackedStringArray("audio_player")]
+script = ExtResource("4_hwpml")
+button_sound = ExtResource("29_dfpqh")
+audio_player = NodePath("../AudioStreamPlayer2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="LeftButton2"]
+material = SubResource("ShaderMaterial_e4iat")
+position = Vector2(-815, 473)
+texture = ExtResource("4_66rle")
+offset = Vector2(815, -473)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftButton2"]
+position = Vector2(-815, 472)
+rotation = -2.47837
+skew = 0.436332
+shape = SubResource("CircleShape2D_cdcvm")
+
+[node name="LeftOrb" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="LeftOrb"]
+material = SubResource("ShaderMaterial_70e40")
+position = Vector2(-744, 274)
+texture = ExtResource("5_6rv3x")
+offset = Vector2(744, -274)
+script = ExtResource("46_70e40")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftOrb"]
+position = Vector2(-747, 277)
+shape = SubResource("CircleShape2D_mytvo")
+
+[node name="Enter" type="Area2D" parent="." node_paths=PackedStringArray("audio_player")]
+script = ExtResource("4_hwpml")
+button_sound = ExtResource("29_dfpqh")
+audio_player = NodePath("../AudioStreamPlayer2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enter"]
+material = SubResource("ShaderMaterial_sb6id")
+position = Vector2(-299, 373)
+texture = ExtResource("6_a0luy")
+offset = Vector2(299, -373)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enter"]
+position = Vector2(-303, 372)
+rotation = 0.0872665
+skew = -0.392699
+shape = SubResource("CapsuleShape2D_hwo7w")
+
+[node name="LeftArrow" type="Area2D" parent="." node_paths=PackedStringArray("audio_player")]
+script = ExtResource("4_hwpml")
+button_sound = ExtResource("29_dfpqh")
+audio_player = NodePath("../AudioStreamPlayer2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="LeftArrow"]
+material = SubResource("ShaderMaterial_n0syi")
+position = Vector2(-464, 471)
+texture = ExtResource("7_66rle")
+offset = Vector2(464, -471)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftArrow"]
+position = Vector2(-467, 471)
+rotation = 0.139626
+skew = 0.579449
+shape = SubResource("RectangleShape2D_v5m2g")
+
+[node name="RightArrow" type="Area2D" parent="." node_paths=PackedStringArray("audio_player")]
+script = ExtResource("4_hwpml")
+button_sound = ExtResource("29_dfpqh")
+audio_player = NodePath("../AudioStreamPlayer2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="RightArrow"]
+material = SubResource("ShaderMaterial_dfpqh")
+position = Vector2(-346, 477)
+texture = ExtResource("8_6rv3x")
+offset = Vector2(346, -477)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightArrow"]
+position = Vector2(-346, 479)
+rotation = 0.0872665
+skew = 0.467748
+shape = SubResource("RectangleShape2D_rkt7e")
+
+[node name="Handle" type="Node2D" parent="." node_paths=PackedStringArray("audio_player")]
+script = ExtResource("40_b5jbq")
+button_sound = ExtResource("29_dfpqh")
+audio_player = NodePath("../AudioStreamPlayer2D")
+
+[node name="HandleSprite" type="Sprite2D" parent="Handle"]
+position = Vector2(800, 456)
+texture = ExtResource("11_s8opg")
+offset = Vector2(-800, -456)
+
+[node name="Area2D" type="Area2D" parent="Handle/HandleSprite"]
+position = Vector2(-800, -456)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Handle/HandleSprite/Area2D"]
+position = Vector2(799, 454)
+rotation = 1.02974
+skew = -0.0436332
+shape = SubResource("CapsuleShape2D_1p6nt")
+
+[node name="Dial" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Dial"]
+position = Vector2(860, 296)
+texture = ExtResource("12_mt3et")
+offset = Vector2(-860, -296)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dial"]
+position = Vector2(858, 297)
+rotation = 2.0944
+shape = SubResource("CapsuleShape2D_wwd1c")
+
+[node name="Keys" type="Node2D" parent="."]
+
+[node name="Key1" type="Area2D" parent="Keys" node_paths=PackedStringArray("audio_player")]
+script = ExtResource("4_hwpml")
+button_sound = ExtResource("41_00lkd")
+audio_player = NodePath("../../AudioStreamPlayer2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="Keys/Key1"]
+material = SubResource("ShaderMaterial_00lkd")
+position = Vector2(168, 364)
+texture = ExtResource("14_5lrl7")
+offset = Vector2(-168, -364)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Keys/Key1"]
+position = Vector2(165.914, 362.856)
+rotation = -0.0872664
+skew = -0.10821
+shape = SubResource("RectangleShape2D_e4iat")
+
+[node name="Key2" type="Area2D" parent="Keys" node_paths=PackedStringArray("audio_player")]
+script = ExtResource("4_hwpml")
+button_sound = ExtResource("41_00lkd")
+audio_player = NodePath("../../AudioStreamPlayer2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="Keys/Key2"]
+material = SubResource("ShaderMaterial_syw1g")
+position = Vector2(177, 421)
+texture = ExtResource("15_4lj8h")
+offset = Vector2(-177, -421)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Keys/Key2"]
+position = Vector2(177, 422)
+skew = -0.331613
+shape = SubResource("RectangleShape2D_sb6id")
+
+[node name="Key3" type="Area2D" parent="Keys" node_paths=PackedStringArray("audio_player")]
+script = ExtResource("4_hwpml")
+button_sound = ExtResource("41_00lkd")
+audio_player = NodePath("../../AudioStreamPlayer2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="Keys/Key3"]
+material = SubResource("ShaderMaterial_b5jbq")
+position = Vector2(189, 482)
+texture = ExtResource("16_n2h82")
+offset = Vector2(-189, -482)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Keys/Key3"]
+position = Vector2(186, 481)
+skew = -0.174533
+shape = SubResource("RectangleShape2D_n0syi")
+
+[node name="Key4" type="Area2D" parent="Keys" node_paths=PackedStringArray("audio_player")]
+script = ExtResource("4_hwpml")
+button_sound = ExtResource("41_00lkd")
+audio_player = NodePath("../../AudioStreamPlayer2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="Keys/Key4"]
+material = SubResource("ShaderMaterial_g22fu")
+position = Vector2(60, 377)
+texture = ExtResource("17_ypv0h")
+offset = Vector2(-60, -377)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Keys/Key4"]
+position = Vector2(59.5, 376.5)
+shape = SubResource("RectangleShape2D_dfpqh")
+
+[node name="Key5" type="Area2D" parent="Keys" node_paths=PackedStringArray("audio_player")]
+script = ExtResource("4_hwpml")
+button_sound = ExtResource("41_00lkd")
+audio_player = NodePath("../../AudioStreamPlayer2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="Keys/Key5"]
+material = SubResource("ShaderMaterial_2ka5k")
+position = Vector2(61, 426)
+texture = ExtResource("18_kyvcm")
+offset = Vector2(-61, -426)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Keys/Key5"]
+position = Vector2(62, 430.5)
+shape = SubResource("RectangleShape2D_00lkd")
+
+[node name="Key6" type="Area2D" parent="Keys" node_paths=PackedStringArray("audio_player")]
+script = ExtResource("4_hwpml")
+button_sound = ExtResource("41_00lkd")
+audio_player = NodePath("../../AudioStreamPlayer2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="Keys/Key6"]
+material = SubResource("ShaderMaterial_wbin6")
+position = Vector2(69, 490)
+texture = ExtResource("19_4707b")
+offset = Vector2(-69, -490)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Keys/Key6"]
+position = Vector2(65.25, 488.625)
+shape = SubResource("RectangleShape2D_syw1g")
+
+[node name="Key7" type="Area2D" parent="Keys" node_paths=PackedStringArray("audio_player")]
+script = ExtResource("4_hwpml")
+button_sound = ExtResource("41_00lkd")
+audio_player = NodePath("../../AudioStreamPlayer2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="Keys/Key7"]
+material = SubResource("ShaderMaterial_lyhwo")
+position = Vector2(-53, 382)
+texture = ExtResource("20_woebh")
+offset = Vector2(53, -382)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Keys/Key7"]
+position = Vector2(-55, 380)
+shape = SubResource("RectangleShape2D_b5jbq")
+
+[node name="Key8" type="Area2D" parent="Keys" node_paths=PackedStringArray("audio_player")]
+script = ExtResource("4_hwpml")
+button_sound = ExtResource("41_00lkd")
+audio_player = NodePath("../../AudioStreamPlayer2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="Keys/Key8"]
+material = SubResource("ShaderMaterial_wxh53")
+position = Vector2(-59, 431)
+texture = ExtResource("21_8qi0h")
+offset = Vector2(59, -431)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Keys/Key8"]
+position = Vector2(-58.5, 432)
+shape = SubResource("RectangleShape2D_g22fu")
+
+[node name="Key9" type="Area2D" parent="Keys" node_paths=PackedStringArray("audio_player")]
+script = ExtResource("4_hwpml")
+button_sound = ExtResource("41_00lkd")
+audio_player = NodePath("../../AudioStreamPlayer2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="Keys/Key9"]
+material = SubResource("ShaderMaterial_thead")
+position = Vector2(-62, 492)
+texture = ExtResource("22_td3jy")
+offset = Vector2(62, -492)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Keys/Key9"]
+position = Vector2(-64, 492)
+shape = SubResource("RectangleShape2D_2ka5k")
+
+[node name="Key10" type="Area2D" parent="Keys" node_paths=PackedStringArray("audio_player")]
+script = ExtResource("4_hwpml")
+button_sound = ExtResource("41_00lkd")
+audio_player = NodePath("../../AudioStreamPlayer2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="Keys/Key10"]
+material = SubResource("ShaderMaterial_6grbp")
+position = Vector2(-164, 363)
+texture = ExtResource("23_b380l")
+offset = Vector2(164, -363)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Keys/Key10"]
+position = Vector2(-163.813, 363.531)
+skew = 0.218166
+shape = SubResource("RectangleShape2D_wbin6")
+
+[node name="Key11" type="Area2D" parent="Keys" node_paths=PackedStringArray("audio_player")]
+script = ExtResource("4_hwpml")
+button_sound = ExtResource("41_00lkd")
+audio_player = NodePath("../../AudioStreamPlayer2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="Keys/Key11"]
+material = SubResource("ShaderMaterial_bjdpb")
+position = Vector2(-175, 417)
+texture = ExtResource("24_7q73x")
+offset = Vector2(175, -417)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Keys/Key11"]
+position = Vector2(-175.386, 418.224)
+skew = 0.305433
+shape = SubResource("RectangleShape2D_lyhwo")
+
+[node name="Key12" type="Area2D" parent="Keys" node_paths=PackedStringArray("audio_player")]
+script = ExtResource("4_hwpml")
+button_sound = ExtResource("41_00lkd")
+audio_player = NodePath("../../AudioStreamPlayer2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="Keys/Key12"]
+material = SubResource("ShaderMaterial_2p8o1")
+position = Vector2(-186, 479)
+texture = ExtResource("25_y250j")
+offset = Vector2(186, -479)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Keys/Key12"]
+position = Vector2(-188, 480)
+rotation = 0.0872665
+skew = 0.125664
+shape = SubResource("RectangleShape2D_wxh53")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

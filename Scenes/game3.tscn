@@ -1,0 +1,150 @@
+[gd_scene load_steps=21 format=3 uid="uid://vgxaho5dki7e"]
+
+[ext_resource type="Script" uid="uid://86vgox4fdvnv" path="res://Scripts/game_3.gd" id="1_26mq8"]
+[ext_resource type="Texture2D" uid="uid://dorsv3m5worev" path="res://Art/PixelGwenMini/Gwen_base1.png" id="6_rsl8m"]
+[ext_resource type="Texture2D" uid="uid://c3sr44lnhqa13" path="res://Art/PixelGwenMini/Gwen_base2.png" id="7_55eqp"]
+[ext_resource type="Texture2D" uid="uid://chyfhlgcuep0t" path="res://Art/PixelGwenMini/Gwen_base3.png" id="8_jy2f3"]
+[ext_resource type="Texture2D" uid="uid://b71e5e3wum351" path="res://Art/PixelGwenMini/PGwen_eyes1.png" id="9_luwqx"]
+[ext_resource type="Texture2D" uid="uid://cta5kv25fqag7" path="res://Art/PixelGwenMini/PGwen_eyes2.png" id="10_q0j4c"]
+[ext_resource type="Texture2D" uid="uid://dh31wa5nn3p6x" path="res://Art/PixelGwenMini/PGwen_eyes3.png" id="11_xkyge"]
+[ext_resource type="Texture2D" uid="uid://brrwuxwbbvn6l" path="res://Art/PixelGwenMini/PGwen_mouth1.png" id="12_k1rkq"]
+[ext_resource type="Texture2D" uid="uid://b6tng0w5ge8jp" path="res://Art/PixelGwenMini/PGwen_mouth2.png" id="13_dcxdt"]
+[ext_resource type="Texture2D" uid="uid://83jq0smtdn5n" path="res://Art/PixelGwenMini/PGwen_mouth3.png" id="14_0361w"]
+[ext_resource type="Texture2D" uid="uid://ba4jocfl0oxay" path="res://Art/Game3/baby1.png" id="14_d1j75"]
+[ext_resource type="Texture2D" uid="uid://cmv5n2x3y5pkm" path="res://Art/PixelGwenMini/PGwen_bg.png" id="15_4ojrs"]
+[ext_resource type="Texture2D" uid="uid://cl12k2c0wdclc" path="res://Art/Game3/baby2.png" id="15_26mq8"]
+[ext_resource type="Texture2D" uid="uid://dtldsvo5wrarx" path="res://Art/Game3/baby3.png" id="16_3txj3"]
+[ext_resource type="Script" uid="uid://b0vq2ds7frip0" path="res://Scripts/baby.gd" id="17_26mq8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iwxau"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_rsl8m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_55eqp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jy2f3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tjhh7"]
+animations = [{
+"frames": [{
+"duration": 16.0,
+"texture": ExtResource("9_luwqx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_q0j4c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_xkyge")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5febn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_k1rkq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_dcxdt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_0361w")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qiemo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_d1j75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_26mq8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_3txj3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_1rvy5"]
+colors = PackedColorArray(0.639567, 7.21961e-07, 0.36271, 1, 1, 1, 1, 1)
+
+[node name="Game3" type="Node2D"]
+script = ExtResource("1_26mq8")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(8, -120)
+zoom = Vector2(0.9, 0.9)
+
+[node name="PixelGwen" type="AnimatedSprite2D" parent="."]
+position = Vector2(-288, -232)
+scale = Vector2(1.9, 1.9)
+sprite_frames = SubResource("SpriteFrames_iwxau")
+
+[node name="Eyes" type="AnimatedSprite2D" parent="PixelGwen"]
+sprite_frames = SubResource("SpriteFrames_tjhh7")
+autoplay = "default"
+
+[node name="Mouth" type="AnimatedSprite2D" parent="PixelGwen"]
+sprite_frames = SubResource("SpriteFrames_5febn")
+
+[node name="Sprite2D" type="Sprite2D" parent="PixelGwen"]
+z_index = -1
+texture = ExtResource("15_4ojrs")
+
+[node name="Baby" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qiemo")
+frame_progress = 0.484113
+script = ExtResource("17_26mq8")
+world_particles_path = NodePath("../GlobalParticles")
+
+[node name="RockParticles" type="CPUParticles2D" parent="Baby"]
+emitting = false
+amount = 60
+lifetime = 0.6
+local_coords = true
+emission_shape = 2
+emission_sphere_radius = 60.0
+spread = 180.0
+gravity = Vector2(0, 150)
+initial_velocity_min = 80.0
+initial_velocity_max = 150.0
+angular_velocity_max = 720.0
+linear_accel_max = 100.0
+scale_amount_min = 0.0
+scale_amount_max = 4.0
+color = Color(0.783394, 0.815638, 0.901893, 1)
+
+[node name="GlobalParticles" type="CPUParticles2D" parent="."]
+scale = Vector2(2, 2)
+amount = 10
+lifetime = 1.5
+local_coords = true
+emission_shape = 1
+emission_sphere_radius = 128.0
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 2)
+angle_max = 300.0
+scale_amount_max = 3.0
+color_ramp = SubResource("Gradient_1rvy5")
+hue_variation_min = -0.69
+hue_variation_max = 0.86

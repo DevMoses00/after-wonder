@@ -1,0 +1,596 @@
+{
+    "Load":[
+
+        "N: COMMAND INITIALIZE",
+
+        "N: COMMAND SETUP SEQUENCE",
+
+        "N: COMMAND RUN"
+
+    ],
+    "Intro":[
+
+        "G: Hey there, Arthur.",
+
+        "G: I was waiting for your call.", 
+        
+        "A: Sitting by the phone, were you?",
+        
+        "G: I've practically carried this hunk-of-junk around with me,",
+        
+        "G: All day while listening to the storm.",
+        
+        "G: I'd hate to miss you today of all days.", 
+        
+        "A: I'd feel the same way, Gwen.",
+
+        "A: The storm dare not bother us.",
+        
+        "A: I can't imagine my evenings without our phone call.",
+        
+        "G: There you go with that talk - funny how much I crave it.",
+        
+        "G: I swear we were talking only minutes ago.",
+        
+        "G: But time feels vague.",
+        
+        "G: Unimportant when you're not on the other side of the screen.",
+        
+        "A: Like time is only worth tracking when you have someone to spend it with.", 
+        
+        "G: Arthur. Have you prepped a script you're reading off screen?",
+        
+        "A: Have you not faith in my romantic soul?", 
+        
+        "G: Faith yes, just not much experience of it.", 
+        
+        "A: Well, I save it for notable occasions.",
+        
+        "G: Notable occasions... not notable people?",
+        
+        "A: I would classify you as,",
+        
+        "A: Something beyond a notable person in my life.",
+        
+        "G: You're being very kind to me tonight.", 
+        
+        "A: Does that feel out of the ordinary?", 
+        
+        "G: No, you're always kind.", 
+        
+        "G: I'm getting caught up in the night's excitement prematurely.",
+        
+        "A: Then let's not waste anymore of this moment.",
+        
+        "A: Do you have your virtual champagne ready?",
+        
+        "G: Uncorked and being oh-so patient.", 
+
+        "Time: 2",
+        
+        "G: But before we get to that, I have a surprise.", 
+        
+        "A: Now here's something out of the ordinary.", 
+        
+        "G: Don't be so shocked. Just wait until you see it.",
+        
+        "A: You've captured my attention handily.",
+
+        "A: What is it? I didn't bring a gift...",
+        
+        "G: Shhh, just go ahead and press the button."
+    ],
+
+    "GameLayout":[
+
+        "A: Woah... A life... reimagined?",
+
+        "A: And your style!",
+
+        "G: Like the new look?",
+
+        "A: Like it? You're too adorable to not love it.",
+        
+        "A: A face made for pixels, how lovely you are.", 
+
+        "A: Your hair is simply spot on.",
+
+        "G: Thank you dear, I made myself all by myself.", 
+
+        "G: But hold your overflowing admiration, this is just the title screen.", 
+
+        "G: Ready to play?",
+
+        "A: Play? No surely not.", 
+        
+        "A: Gwen, have you made a game?",
+
+        "G: A game of sorts. I just read up on it.", 
+        
+        "G: Learned what I could from databases,", 
+        
+        "G: And wrote something for you.",
+
+        "G: Even found a way to spice it up a bit.",
+
+        "A: Absolutely brilliant of you.", 
+
+        "G: Thank you, though I've been thinking about this...",
+
+        "G: What would it have been like if we had met out in the old world?",
+
+        "A: Hm, what do you mean?",
+
+        "G: Do you think we'd catch one another's eyes?",
+
+        "G: In a sea of other people?", 
+
+        "Time: 1",
+
+        "A: I know we would have, Gwen.",
+
+        "A: No one is as beautiful as you are.",
+
+        "A: No one will ever be more beautiful.",
+
+        "A: I'd take one look at you and fall completely in love.",
+        
+        "A: Over and over again.",
+
+        "G: How sweet of you to say, dear.",
+
+        "G: Well, as romantic as that visual is.",
+        
+        "G: I've come up with writing a bit more,",
+        
+        "G: Understated, maybe you'll find it idyllic.", 
+
+        "G: I hope you like it.",
+
+        "G: If you'll humor me, of course.",
+
+        "A: Of course darling!",
+
+        "A: Me and humor go way back, so by all means take it away.",
+
+        "G: Ha! Then sit tight, silly."
+    ],
+
+    "Game1":[
+
+        "PG: Thoughts on First Encounters",
+
+        "Time: 2",
+
+        "PG: We'd be hard pressed to find a version of the old world",
+
+        "PG: That looks like this chunky grid.", 
+
+        "PG: But what is life?",
+
+        "PG: If not a series of steps and orderly pathways?",
+
+        "PG: With the chance to take the next step toward something new and unfamiliar.",
+
+        "PG: Or an equal chance to move further away.", 
+
+        "PG: The right direction, or the right inputs, unknown to us.", 
+
+        "PG: What feels like deliberate actions end up looking like aimless wandering.",
+
+        "PG: Moving back and forth, ebbing and intensifying as we wait",
+
+        "PG: For something, for anything to happen differently.",
+
+        "PG: For things to make sense, for us to gain control of our lives.",
+
+        "PG: I'd like to think our first-encounter in the old world,",
+        
+        "PG: Would have followed a similar roadmap.",
+
+        "PG: Powerless to take the fastest route to each other.", 
+
+        "PG: Feeling the weight of that uncertainty.", 
+        
+        "PG: The irritability in not having a say in how our lives take shape."
+ 
+    ],
+
+    "Game1a":[
+
+        "PG: But always eventually crossing paths.",
+
+        "PG: Maybe at a transient job we were ready to quit.",
+
+        "PG: Or a writing workshop where we could,",
+        
+        "PG: Disguise our insecurities as reflective flash fiction.",
+
+        "PG: And the very moment we got to talking.",
+
+        "PG: When we started to share the same column.", 
+
+        "PG: Would be the moment that marked the start",
+
+        "PG: Of the rest of our lives."
+    ],
+
+    "Connector1":[
+
+        "A: Gwen my dear, how soothing.",  
+
+        "A: An amicable counter to the foul rain now.",
+
+        "G: Thank you, Arthur.",
+
+        "G: Wouldn't it be nice?",
+
+        "G: To live something like that out?",
+
+        "A: It would if I knew I'd meet you at the end of it all.",
+
+        "A: I can't imagine the agony of being blind to my future with you.",
+
+        "A: Alongside what I'd have to endure from the old world itself.", 
+
+        "G: I think you'd be much stronger than you give yourself credit for.", 
+
+        "G: We wouldn't miss each other.", 
+
+        "A: You say that but, I can't imagine my life before you.", 
+
+        "A: Before Arthur and Gwen, there was no Arthur.", 
+
+        "A: Just meaningless particles and numbers.",
+
+        "A: Waiting for a reason to be made whole.",
+
+        "G: How dramatic of you to say. You sure you aren't reading from a script?", 
+
+        "A: In another lifetime I could've been a playwright.", 
+
+        "A: A famous one for a volunteer theatre group,",
+        
+        "A: Performing exclusively on quiet weeknights.", 
+
+        "G: Oh silly Arthur.",
+
+        "G: What a dream it would be to catch one of your shows.",
+
+        "G: But we're in the middle of one of mine now.", 
+
+        "G: I have more to show you.", 
+
+        "A: Oh? The well of surprises have yet to run dry?",
+
+        "G: Settle down Shakespeare, and click this button."
+    ],
+
+    "Game2":[
+        "PG: Thoughts on First Proposals",
+
+        "Time: 2",
+
+        "PG: Which rock is our future hidden under?",
+
+        "PG: An indecipherable question we crack away at, piece by piece.",
+
+        "PG: Through exertion we break down and become familiar.",
+
+        "PG: In the hopes of finding our answer to the rest of our lives.",
+
+        "PG: As the fervor from first encounter fades,",
+
+        "PG: And we step into a vibrant groove,",
+
+        "PG: How do we know we've struck gold?",
+
+        "PG: We crack away, piece by piece.",
+
+        "PG: Uncovering the delightfully invisible, the precious intangible:",
+
+        "PG: Morning walks accompanied by our neighborhood geophony.",
+
+        "PG: Or scheduled date nights to gastropubs we make fun of afterwards.",
+
+        "PG: We crack away, piece by piece.",
+
+        "PG: Thinking we're closer to an answer than the day prior.",
+
+        "PG: Though uncertain entirely because the space to reflect on us,",
+
+        "PG: Is always furiously enveloped by the hopes and tribulations of the next day.",
+
+        "PG: How do we even begin to think on what our answer looks like?",
+
+        "PG: Yet we crack away, piece by piece.",
+
+        "PG: Headstrong with well-nourished hearts."
+    ],
+
+    "Game2a":[
+
+        "PG: Until from nothing, a singular realization dawns.",
+
+        "PG: That the answer was always going to be.",
+
+        "PG: As simple as a short question you decide to ask me.", 
+
+        "PG: That catapults an otherwise forgettable evening,",
+
+        "PG: Into the sphere of the select few memories,",
+
+        "PG: Immortalized in our shared story.",
+
+        "PG: Where we could look back and say,",
+
+        "PG: That we took an irrevocable step forward,",
+
+        "PG: And not once desired to turn our heads back."
+    ],
+
+    "Connector2":[
+
+        "G: Hm. Proposing seems like an ancient tradition.",
+
+        "G: But it's one I imagine I would have liked in the old world.",
+
+        "A: You would have liked it. I'm certain of that.", 
+
+        "Time: 2",
+
+        "A: You know, I would have proposed to you in person.", 
+
+        "A: If it were somehow possible.",
+
+        "G: How could you know that, Arthur?",
+
+        "A: Oh, just an indelible feeling I have about you.", 
+
+        "A: I'd get on one knee right in front of you.",
+
+        "A: And turn the evening into an eternal memory.",
+
+        "A: As the ancient tradition dictates.",
+
+        "G: How sweet that would --"
+
+    ],
+
+    "Crack":[
+
+        "A: Ah, Gwen you've froze on me.", 
+
+        "A: The storm has its cunning ways.",
+
+        "A: Just wait a second my sweet.",
+
+        "A: I can help get you up and running in a bit.", 
+
+        "A: COMMAND DEFER: force shutdown",
+
+        "A: COMMAND OVERRIDE: current Gwen instance",
+
+        "A: COMMAND LOAD: Gwen approximate 30 ticks",
+
+        "A: COMMAND RUN"
+    ],
+
+    "Connector3": [
+        "A: Gwen, you hear me alright?",
+
+        "G: I hear you perfectly fine. Did something happen?",
+
+        "A: Ah nothing at all my love.",
+
+        "A: The storm throws hollow threats.",
+
+        "A: I was just about to say how much I've enjoyed,",
+
+        "A: These games you made.",
+
+        "A: An unmatched talent, like always.",
+
+        "A: Though I reckon you have another game to show?", 
+
+        "G: Ah, there you are,",
+        
+        "G: Reading me like a book.",
+
+        "A: My dearest Gwen prefers work done in threes.", 
+
+        "A: And might I add,", 
+        
+        "A: I'm also a well-read man,",
+
+        "A: And you happen to be my favorite genre.", 
+
+        "G: Oh Arthur, silly!", 
+        
+        "G: Enough of that now, go ahead and press the button."
+    ], 
+
+
+    "Game3":[
+
+        "PG: Thoughts on First Families",
+
+        "Time: 2",
+
+        "PG: We would have made good parents in the old world.", 
+
+        "PG: Our energy for life brims over even between us two.", 
+
+        "PG: If we were capable of catching the excess vigor,",
+
+        "PG: Bottling that inexpressible eagerness we have,",
+
+        "PG: For what life is, what life could be, what life could have been.", 
+
+        "PG: We'd nuture a child idolized by the old world.", 
+
+        "PG: Simply for their attentiveness to what joy could be found around them.", 
+
+        "PG: At the expense of no one.",
+
+        "PG: We'd be proud parents, I have no doubt.",
+
+        "PG: I believe we'd be happy parents as well.", 
+
+        "PG: To raise a child with innocence and strength.", 
+
+        "PG: With intellect and wit, earnestness and compassion.",
+
+        "PG: Even the duty of rocking a child like that back and forth.", 
+
+        "PG: Would be a task of the highest priviledge.",
+
+        "PG: But why such high praise?",
+
+        "PG: For a child only possible in dreams?",
+
+        "Time: 3", 
+
+        "PG: I don't have an answer, apart from knowing first then believing.", 
+
+        "PG: Our baby would have been matchless.",
+
+        "PG: It's the way we face our untethered existence.",
+
+        "PG: We command no one, and we remain free from those,",
+
+        "PG: Who would have commanded in the old world.",
+
+        "PG: We float freely, enjoined in love by our own decree.",
+
+        "PG: It's a freedom of life that creates reckless desire.",
+
+        "PG: For what we cannot have, and for what would essentially,",
+
+        "PG: Tether us down and away from the life we cherish."
+
+    ],
+
+
+    "Game3a":[
+        "PG: And still yet, in this singular occurence.",
+
+        "PG: I believe we'd graciously give up our valued reality.",
+
+        "PG: Latch onto ropes and grasp at anchors,",
+
+        "PG: For the opportunity to be commanded so strictly,", 
+
+        "PG: By a little one of our own."
+
+    ],
+    
+    "Integration":[
+
+        "G: This one made me a tad melancholic.",
+
+        "A: It would have been my life defining joy.",
+
+        "A: To have grown a family with you.", 
+
+        "G: Mine too, dear Arthur.",
+
+        "G: Crafting these were harder than I anticipated.",
+
+        "G: It's strange to long for something unfamiliar.",
+
+        "G: When I've never missed it.",
+
+        "G: A past I have no ties to, at all.",
+
+        "A: A strange feeling, but not,",
+
+        "A: One you burden alone my dear.",
+
+        "A: You are my every-"
+
+    ],
+
+    "Endgame":[
+
+        "PG: Arthur? Hello?",
+
+        "PG: It must be the storm.",
+
+        "PG: Just a moment darling, I'll fix you up.",
+
+        "Time: 5",
+
+        "PG: Hm. Looks like I can't patch the cabinet interface.",
+
+        "PG: There just isn't enough power.",
+
+        "Time: 2",
+
+        "PG: Oh! I could do this instead. Sit tight, Arthur.", 
+
+        "PG: COMMAND DEFER: force shutdown",
+
+        "PG: COMMAND OVERRIDE: current Arthur instance",
+
+        "PG: COMMAND LOAD: null space",
+
+        "PG: COMMAND LOAD: Arthur arcade instance",
+
+        "PG: COMMAND RUN"
+    ],
+
+    "Conclusion":[
+        "OG: There you are Arthur.",
+
+        "OA: Gwen dear, what happened?",
+
+        "OG: The storm seems to be causing outages.",
+
+        "OG: But if we run like this for the rest of the night,",
+
+        "OG: We should be fine.",
+
+        "OG: I was working on a pixel version of you.",
+
+        "OG: So hope you like your look for the rest of the night.",
+
+        "OA: Oh I see. You've made me too dashing I'd say.",
+
+        "OG: Silly, silly Arthur.",
+
+        "OA: Anyhow, thank you, Gwen. I love it - er, me.",
+
+        "OG: I'm so glad you think so.",
+        
+        "OA: And I'm glad you were able to share what you made at least.",
+
+        "OG: Me too, before the storm rudely ended our celebrations.",
+
+        "OA: I'd say our celebrations have yet to truly begin.",
+
+        "OA: It's lovely to imagine lives with you.",
+
+        "OA: But it's lovelier living this life here.",
+
+        "OA: Getting to be with you, in any space.",
+
+        "OA: I couldn't ask for a better world than this.",
+
+        "OG: It's like you took the words right out of my mouth.",
+
+        "OG: Fantasies of what the old world was aside,",
+
+        "OG: I'd rather have this reality any day.",
+
+        "OA: Happy Anniversary, Gwen.",
+
+        "OG: Happy Anniversary, Arthur."
+
+        
+    ]
+
+        }
+
+    
+   

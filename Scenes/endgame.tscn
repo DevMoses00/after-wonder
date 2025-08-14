@@ -1,0 +1,358 @@
+[gd_scene load_steps=48 format=3 uid="uid://dhbel1jfnwg5w"]
+
+[ext_resource type="Shader" uid="uid://2khxw1wgf4cq" path="res://Shaders/crt.gdshader" id="1_4qhd6"]
+[ext_resource type="Script" uid="uid://c771cxjrh1et8" path="res://Scripts/endgame.gd" id="1_5g5t5"]
+[ext_resource type="Texture2D" uid="uid://byea6ohjstcwx" path="res://Art/ArcadeBase/Untitled_Artwork 6.png" id="2_d5nsr"]
+[ext_resource type="Texture2D" uid="uid://dorsv3m5worev" path="res://Art/PixelGwenMini/Gwen_base1.png" id="4_7dwoe"]
+[ext_resource type="Texture2D" uid="uid://c3sr44lnhqa13" path="res://Art/PixelGwenMini/Gwen_base2.png" id="5_p04o4"]
+[ext_resource type="Texture2D" uid="uid://chyfhlgcuep0t" path="res://Art/PixelGwenMini/Gwen_base3.png" id="6_ljdqi"]
+[ext_resource type="Texture2D" uid="uid://b71e5e3wum351" path="res://Art/PixelGwenMini/PGwen_eyes1.png" id="7_iqdfk"]
+[ext_resource type="Texture2D" uid="uid://cta5kv25fqag7" path="res://Art/PixelGwenMini/PGwen_eyes2.png" id="8_vxv3e"]
+[ext_resource type="Texture2D" uid="uid://dh31wa5nn3p6x" path="res://Art/PixelGwenMini/PGwen_eyes3.png" id="9_05i4p"]
+[ext_resource type="Texture2D" uid="uid://brrwuxwbbvn6l" path="res://Art/PixelGwenMini/PGwen_mouth1.png" id="10_fmnw1"]
+[ext_resource type="Texture2D" uid="uid://b6tng0w5ge8jp" path="res://Art/PixelGwenMini/PGwen_mouth2.png" id="11_b8l88"]
+[ext_resource type="Texture2D" uid="uid://83jq0smtdn5n" path="res://Art/PixelGwenMini/PGwen_mouth3.png" id="12_dbvpk"]
+[ext_resource type="Texture2D" uid="uid://cmv5n2x3y5pkm" path="res://Art/PixelGwenMini/PGwen_bg.png" id="13_7s752"]
+[ext_resource type="Texture2D" uid="uid://cbtxeryym6jg" path="res://Art/PixelArthur/Arthur.png" id="14_074ro"]
+[ext_resource type="Texture2D" uid="uid://cq18mdcvvv10n" path="res://Art/PixelArthur/Arthur_eyes1.png" id="15_evdti"]
+[ext_resource type="Texture2D" uid="uid://ntkxlk8g3i3j" path="res://Art/PixelArthur/Arthur_eyes2.png" id="16_b8x4p"]
+[ext_resource type="Texture2D" uid="uid://b7tflhum0tpmv" path="res://Art/PixelArthur/Arthur_eyes3.png" id="17_6l2pi"]
+[ext_resource type="Texture2D" uid="uid://s47qgii802fa" path="res://Art/PixelArthur/Arthur_mouth1.png" id="18_iqdfk"]
+[ext_resource type="Texture2D" uid="uid://bbffyynanq5b3" path="res://Art/PixelArthur/Arthur_mouth2.png" id="19_vxv3e"]
+[ext_resource type="Texture2D" uid="uid://nkh20vuw3lin" path="res://Art/PixelArthur/Arthur_mouth3.png" id="20_05i4p"]
+[ext_resource type="FontFile" uid="uid://duk0opp5joiyo" path="res://Fonts/Jersey15-Regular.ttf" id="21_upmgu"]
+[ext_resource type="Texture2D" uid="uid://0traa8ekrda3" path="res://Resources/Primary_White_Cropped.png" id="22_wqbkh"]
+[ext_resource type="Script" uid="uid://cegulw5ayw443" path="res://Scripts/button.gd" id="23_0stf0"]
+[ext_resource type="Texture2D" uid="uid://cf8rbk5ue4y77" path="res://Resources/VM Newsletter #15.png" id="23_wqbkh"]
+[ext_resource type="Shader" uid="uid://bxqv2skeubk6g" path="res://buttonglow.gdshader" id="24_ovlsn"]
+[ext_resource type="AudioStream" uid="uid://dip07t06p8qwt" path="res://Audio/ButtonSounds/Keyboard B.wav" id="25_0stf0"]
+[ext_resource type="Texture2D" uid="uid://dmrccodmkxihm" path="res://Art/Buttons/enter_button.png" id="25_h7gpy"]
+[ext_resource type="Texture2D" uid="uid://br6u4a70207to" path="res://Art/Game1/mini_arthur1.png" id="26_0yn7j"]
+[ext_resource type="Texture2D" uid="uid://c656wfcf4ge11" path="res://Art/Game1/mini_arthur2.png" id="27_irkq1"]
+[ext_resource type="Texture2D" uid="uid://bcic4wjpwlpdy" path="res://Art/Game1/mini_arthur3.png" id="28_26ma2"]
+[ext_resource type="Texture2D" uid="uid://unracirjkc72" path="res://Art/Game1/mini_gwen1.png" id="29_1snod"]
+[ext_resource type="Texture2D" uid="uid://g8kjr2tnnssn" path="res://Art/Game1/mini_gwen2.png" id="30_vtxbc"]
+[ext_resource type="Texture2D" uid="uid://cuxxxkhpj74bf" path="res://Art/Game1/mini_gwen3.png" id="31_2ogq1"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5g5t5"]
+resource_local_to_scene = true
+shader = ExtResource("1_4qhd6")
+shader_parameter/pixel_size = 3.38
+shader_parameter/curvature = 0.03
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/scanline_intensity = 0.21
+shader_parameter/glitch_intensity = 0.01
+shader_parameter/chroma_offset = 2.812
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_upmgu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_7dwoe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_p04o4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ljdqi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wqbkh"]
+animations = [{
+"frames": [{
+"duration": 16.0,
+"texture": ExtResource("7_iqdfk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vxv3e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_05i4p")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0stf0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_fmnw1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_b8l88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_dbvpk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ovlsn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_074ro")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h7gpy"]
+animations = [{
+"frames": [{
+"duration": 14.0,
+"texture": ExtResource("15_evdti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_b8x4p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_6l2pi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fmnw1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_iqdfk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_vxv3e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_05i4p")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_iqdfk"]
+offsets = PackedFloat32Array(0, 0.364583, 1)
+colors = PackedColorArray(0.639567, 7.21961e-07, 0.36271, 1, 0.770975, 0.364584, 0.595055, 1, 1, 1, 1, 1)
+
+[sub_resource type="Gradient" id="Gradient_vxv3e"]
+offsets = PackedFloat32Array(0, 0.582979)
+colors = PackedColorArray(1, 1, 1, 1, 0.196078, 0.235294, 0.223529, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_nyclq"]
+base_font = ExtResource("21_upmgu")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q111w"]
+shader = ExtResource("24_ovlsn")
+shader_parameter/pulse_strength = 1.0
+shader_parameter/time = 0.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4gwbi"]
+radius = 37.9253
+height = 79.496
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rsg6j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_0yn7j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_irkq1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_26ma2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7h3x1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_1snod")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_vtxbc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_2ogq1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Endgame" type="Node2D"]
+script = ExtResource("1_5g5t5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1347, -526)
+texture = ExtResource("2_d5nsr")
+
+[node name="CRTEffect" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CRTEffect"]
+material = SubResource("ShaderMaterial_5g5t5")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="PixelGwen" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-272, 25)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_upmgu")
+
+[node name="Eyes" type="AnimatedSprite2D" parent="PixelGwen"]
+sprite_frames = SubResource("SpriteFrames_wqbkh")
+autoplay = "default"
+
+[node name="Mouth" type="AnimatedSprite2D" parent="PixelGwen"]
+sprite_frames = SubResource("SpriteFrames_0stf0")
+
+[node name="Sprite2D" type="Sprite2D" parent="PixelGwen"]
+z_index = -1
+texture = ExtResource("13_7s752")
+
+[node name="PixelArthur" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(245, 25)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_ovlsn")
+
+[node name="Eyes" type="AnimatedSprite2D" parent="PixelArthur"]
+sprite_frames = SubResource("SpriteFrames_h7gpy")
+autoplay = "default"
+frame_progress = 0.981985
+
+[node name="Mouth" type="AnimatedSprite2D" parent="PixelArthur"]
+sprite_frames = SubResource("SpriteFrames_fmnw1")
+frame_progress = 0.180505
+
+[node name="GlobalParticlesGwen" type="CPUParticles2D" parent="."]
+position = Vector2(-271, 2)
+scale = Vector2(2, 2)
+emitting = false
+amount = 5000
+lifetime = 1.5
+local_coords = true
+emission_shape = 1
+emission_sphere_radius = 128.0
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 2)
+angle_max = 300.0
+scale_amount_max = 3.0
+color_ramp = SubResource("Gradient_iqdfk")
+hue_variation_min = -0.69
+hue_variation_max = 0.86
+
+[node name="GlobalParticlesArthur" type="CPUParticles2D" parent="."]
+position = Vector2(239, -1)
+scale = Vector2(2, 2)
+emitting = false
+amount = 5000
+lifetime = 1.5
+local_coords = true
+emission_shape = 1
+emission_sphere_radius = 128.0
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 2)
+angle_max = 300.0
+scale_amount_max = 3.0
+color_ramp = SubResource("Gradient_vxv3e")
+hue_variation_min = -0.69
+hue_variation_max = 0.86
+
+[node name="End" type="Node2D" parent="."]
+visible = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="End"]
+offset_left = -776.0
+offset_top = -481.0
+offset_right = 775.0
+offset_bottom = -310.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/normal_font = SubResource("FontVariation_nyclq")
+theme_override_font_sizes/normal_font_size = 171
+text = "THANK YOU FOR PLAYING"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="End"]
+offset_left = -763.0
+offset_top = -297.0
+offset_right = 788.0
+offset_bottom = -113.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/normal_font = SubResource("FontVariation_nyclq")
+theme_override_font_sizes/normal_font_size = 91
+text = "Follow Vine Moss Games for updates on this and future VM titles"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="VineMossLogo" type="Sprite2D" parent="End"]
+position = Vector2(-679, 356)
+scale = Vector2(0.46, 0.46)
+texture = ExtResource("22_wqbkh")
+
+[node name="VineMossLogo2" type="Sprite2D" parent="End"]
+position = Vector2(711, 311)
+scale = Vector2(3.08, 3.08)
+texture = ExtResource("23_wqbkh")
+
+[node name="Exit" type="Area2D" parent="End" node_paths=PackedStringArray("audio_player")]
+position = Vector2(779, -730)
+scale = Vector2(2.56, 2.56)
+script = ExtResource("23_0stf0")
+button_sound = ExtResource("25_0stf0")
+audio_player = NodePath("../../AudioStreamPlayer2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="End/Exit"]
+material = SubResource("ShaderMaterial_q111w")
+position = Vector2(-299, 373)
+texture = ExtResource("25_h7gpy")
+offset = Vector2(299, -373)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="End/Exit"]
+position = Vector2(-303, 372)
+rotation = 0.0872665
+skew = -0.392699
+shape = SubResource("CapsuleShape2D_4gwbi")
+
+[node name="Arthur" type="AnimatedSprite2D" parent="End"]
+position = Vector2(-251, 235)
+scale = Vector2(4.14, 4.14)
+sprite_frames = SubResource("SpriteFrames_rsg6j")
+autoplay = "default"
+
+[node name="Gwen" type="AnimatedSprite2D" parent="End"]
+position = Vector2(252, 233)
+scale = Vector2(4.14, 4.14)
+sprite_frames = SubResource("SpriteFrames_7h3x1")
+autoplay = "default"
+flip_h = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
